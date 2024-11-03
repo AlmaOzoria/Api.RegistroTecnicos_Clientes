@@ -1,3 +1,4 @@
+using Tecnicos.Services.DI;
 
 namespace Api.RegistroTecnicos
 {
@@ -13,7 +14,8 @@ namespace Api.RegistroTecnicos
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-
+            //Iyectando services ---
+            builder.Services.RegisterServices(builder.Configuration);
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
